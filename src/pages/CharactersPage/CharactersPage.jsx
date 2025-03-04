@@ -37,7 +37,7 @@ const CharacterPage = () => {
           getCharacterInfo={getCharacterInfo}
         />
         <CharacterInfo selectedCharacter={selectedCharacter} />
-        <img className={s.bg_img} src="../../img/bg_character.png" alt="" />
+        <img className={s.bg_img} src="/img/bg_character.png" alt="" />
       </div>
     </>
   );
