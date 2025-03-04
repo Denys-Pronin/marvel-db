@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.bg_img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: -2;
+}

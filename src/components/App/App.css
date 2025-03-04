@@ -1,0 +1,9 @@
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}

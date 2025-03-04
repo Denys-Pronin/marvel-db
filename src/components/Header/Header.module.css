@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+.logoLink {
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  span {
+    color: #9f0013;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 8px;
+  span {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+.link {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.active {
+  color: #9f0013;
+}

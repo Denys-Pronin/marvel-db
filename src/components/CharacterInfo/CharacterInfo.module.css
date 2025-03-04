@@ -1,0 +1,75 @@
+.container {
+  width: 100%;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+  height: max-content;
+  background-color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 38px;
+  background-color: #5c5c5c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  clip-path: polygon(10% 0, 100% 0, 100% 75%, 90% 100%, 0 100%, 0 25%);
+}
+
+.link_home {
+  background-color: #9f0013;
+}
+
+.descr {
+  margin-bottom: 10px;
+}
+
+.comics_text {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.comics_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comics_item {
+  padding: 4px 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
