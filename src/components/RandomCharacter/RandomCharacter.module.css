@@ -77,3 +77,9 @@
 .text:nth-child(2) {
   margin-bottom: 12px;
 }
+
+@media screen and (max-width: 568px) {
+  .container {
+    display: none;
+  }
+}

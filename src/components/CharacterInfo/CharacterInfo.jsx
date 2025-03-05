@@ -38,7 +38,9 @@ const CharacterInfo = ({ selectedCharacter, isLoading }) => {
               </div>
             </div>
           </div>
-          {selectedCharacter.description !== "" && (
+          {selectedCharacter.description == "" ? (
+            <p>No information for this character</p>
+          ) : (
             <p className={s.descr}>{selectedCharacter.description}</p>
           )}
           {selectedCharacter.comics.items.length !== 0 && (

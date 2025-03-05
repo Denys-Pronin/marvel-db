@@ -1,7 +1,11 @@
 import s from "./Character.module.css";
 const Character = ({ characterData, getCharacterInfo }) => {
+  const handleClick = () => {
+    getCharacterInfo(characterData.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
-    <div onClick={() => getCharacterInfo(characterData.id)}>
+    <div onClick={handleClick}>
       <img
         className={s.img}
         src={`${characterData.thumbnail.path}.${characterData.thumbnail.extension}`}

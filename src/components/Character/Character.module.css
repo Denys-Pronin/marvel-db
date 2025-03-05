@@ -10,3 +10,9 @@
   font-weight: 700;
   padding: 0 15px;
 }
+
+@media screen and (max-width: 568px) {
+  .img {
+    height: 150px;
+  }
+}

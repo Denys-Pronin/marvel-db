@@ -77,3 +77,12 @@
 .loader {
   margin: 0 auto;
 }
+
+@media screen and (max-width: 568px) {
+  .comics_text {
+    display: none;
+  }
+  .comics_list {
+    display: none;
+  }
+}

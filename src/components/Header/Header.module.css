@@ -30,3 +30,13 @@
 .active {
   color: #9f0013;
 }
+
+@media screen and (max-width: 568px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .links {
+    justify-content: center;
+  }
+}
