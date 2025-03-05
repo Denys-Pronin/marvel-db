@@ -2,6 +2,7 @@
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
+  padding: 0 20px;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   #root {
     max-width: 320px;
   }

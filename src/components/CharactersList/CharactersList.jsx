@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import Character from "../Character/Character.jsx";
 import s from "./CharactersList.module.css";
 
