@@ -115,7 +115,6 @@ const CharacterPage = () => {
               selectedCharacter={selectedCharacter}
             />
           </div>
-          <img className={s.bg_img} src="/src/img/bg_character.png" alt="bg" />
         </>
       )}
     </>
