@@ -7,7 +7,7 @@ export const getAllCharacters = async () => {
   const res = await axios.get(`/characters`, {
     params: {
       limit: 9,
-      offset: 210,
+      offset: 0,
       apikey: API_KEY,
     },
   });
