@@ -1,8 +1,12 @@
+.container {
+  max-width: 650px;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  max-width: 650px;
+  margin-bottom: 44px;
 }
 .item {
   width: calc((100% - 50px) / 3);

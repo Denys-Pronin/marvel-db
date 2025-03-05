@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <Header />
+
       <Routes>
         <Route path="/" element={<CharactersPage />} />
         <Route path="/comics" element={<ComicsPage />} />

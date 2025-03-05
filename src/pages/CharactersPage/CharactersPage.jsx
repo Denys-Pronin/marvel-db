@@ -6,11 +6,13 @@ import CharacterInfo from "../../components/CharacterInfo/CharacterInfo.jsx";
 import s from "./CharactersPage.module.css";
 import { BarLoader } from "react-spinners";
 import RandomCharacter from "../../components/RandomCharacter/RandomCharacter.jsx";
+import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn.jsx";
 
 const CharacterPage = () => {
   const [characters, setCharacters] = useState([]);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [randomCharacter, setRandomCharacter] = useState(null);
+  const [offset, setOffset] = useState(9);
   const [loading, setLoading] = useState({
     char: true,
     charInfo: true,
@@ -71,6 +73,21 @@ const CharacterPage = () => {
       setLoading((prev) => ({ ...prev, randomChar: false }));
     }
   };
+
+  const getMoreCharacters = async () => {
+    try {
+      setLoading((prev) => ({ ...prev, char: true }));
+      const res = await getAllCharacters(offset);
+      setCharacters((prev) => [...prev, ...res]);
+      setOffset(offset + 9);
+      console.log(characters);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading((prev) => ({ ...prev, char: false }));
+    }
+  };
+
   return (
     <>
       <RandomCharacter
@@ -78,20 +95,28 @@ const CharacterPage = () => {
         getRandomCharacter={getRandomCharacter}
         isLoading={loading.randomChar}
       />
-      {loading.char ? (
+      {loading.char && characters.length == 0 ? (
         <BarLoader className={s.loader} />
       ) : (
-        <div className={s.container}>
-          <CharactersList
-            characters={characters}
-            getCharacterInfo={getCharacterInfo}
-          />
-          <CharacterInfo
-            isLoading={loading.charInfo}
-            selectedCharacter={selectedCharacter}
-          />
-          <img className={s.bg_img} src="/src/img/bg_character.png" alt="" />
-        </div>
+        <>
+          <div className={s.container}>
+            <CharactersList
+              characters={characters}
+              getCharacterInfo={getCharacterInfo}
+            >
+              {loading.char ? (
+                <BarLoader className={s.loader_btn} />
+              ) : (
+                <LoadMoreBtn getMoreCharacters={getMoreCharacters} />
+              )}
+            </CharactersList>
+            <CharacterInfo
+              isLoading={loading.charInfo}
+              selectedCharacter={selectedCharacter}
+            />
+          </div>
+          <img className={s.bg_img} src="/src/img/bg_character.png" alt="bg" />
+        </>
       )}
     </>
   );
