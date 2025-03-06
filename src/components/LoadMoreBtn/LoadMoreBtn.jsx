@@ -1,10 +1,10 @@
 import React from "react";
 import s from "./LoadMoreBtn.module.css";
 
-const LoadMoreBtn = ({ getMoreCharacters }) => {
+const LoadMoreBtn = ({ getMore }) => {
   return (
     <div className={s.wrapper}>
-      <button onClick={getMoreCharacters} className={s.btn}>
+      <button onClick={getMore} className={s.btn}>
         LOAD MORE
       </button>
     </div>

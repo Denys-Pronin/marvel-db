@@ -50,7 +50,7 @@ const ComicsPage = () => {
               {loading ? (
                 <BarLoader className={s.loader_btn} />
               ) : (
-                <LoadMoreBtn getMoreComics={getMoreComics} />
+                <LoadMoreBtn getMore={getMoreComics} />
               )}
             </ComicsList>
           </div>

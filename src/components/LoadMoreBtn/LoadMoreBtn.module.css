@@ -10,5 +10,6 @@
   font-weight: 400;
   clip-path: polygon(10% 0, 100% 0, 100% 75%, 90% 100%, 0 100%, 0 25%);
   margin: 0 auto;
+  margin-bottom: 100px;
   cursor: pointer;
 }

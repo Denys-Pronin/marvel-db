@@ -107,7 +107,7 @@ const CharacterPage = () => {
               {loading.char ? (
                 <BarLoader className={s.loader_btn} />
               ) : (
-                <LoadMoreBtn getMoreCharacters={getMoreCharacters} />
+                <LoadMoreBtn getMore={getMoreCharacters} />
               )}
             </CharactersList>
             <CharacterInfo
