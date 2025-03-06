@@ -4,6 +4,16 @@ import s from "./CharacterInfo.module.css";
 import { BarLoader } from "react-spinners";
 
 const CharacterInfo = ({ selectedCharacter, isLoading }) => {
+  let imgStyle = { objectFit: "cover" };
+  console.log(selectedCharacter);
+
+  if (
+    selectedCharacter !== null &&
+    `${selectedCharacter.thumbnail.path}.${selectedCharacter.thumbnail.extension}` ===
+      "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"
+  ) {
+    imgStyle = { objectFit: "fill" };
+  }
   return (
     <div className={s.container}>
       {selectedCharacter == null ? (
@@ -17,6 +27,7 @@ const CharacterInfo = ({ selectedCharacter, isLoading }) => {
               className={s.img}
               src={`${selectedCharacter.thumbnail.path}.${selectedCharacter.thumbnail.extension}`}
               alt={selectedCharacter.name}
+              style={imgStyle}
             />
             <div className={s.head}>
               <p className={s.name}>{selectedCharacter.name}</p>

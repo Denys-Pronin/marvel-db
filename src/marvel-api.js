@@ -22,3 +22,16 @@ export const getCharacter = async (id) => {
   });
   return res.data.data.results[0];
 };
+
+export const getAllComics = async (offset) => {
+  const res = await axios.get(`/comics`, {
+    params: {
+      limit: 8,
+      offset,
+      apikey: API_KEY,
+    },
+  });
+  console.log(res.data);
+
+  return res.data.data.results;
+};
