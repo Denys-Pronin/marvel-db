@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+.img {
+  width: 292px;
+}
+
+.info {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  color: #000;
+  font-size: 22px;
+  font-weight: 700;
+  max-width: 550px;
+}
+
+.price {
+  color: #9f0013;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #9f0013;
+}

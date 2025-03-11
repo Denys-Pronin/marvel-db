@@ -33,3 +33,12 @@ export const getAllComics = async (offset) => {
   });
   return res.data.data.results;
 };
+
+export const getComic = async (id) => {
+  const res = await axios.get(`/comics/${id}`, {
+    params: {
+      apikey: API_KEY,
+    },
+  });
+  return res.data.data.results[0];
+};
