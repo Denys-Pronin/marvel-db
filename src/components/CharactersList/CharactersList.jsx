@@ -2,8 +2,6 @@ import Character from "../Character/Character.jsx";
 import s from "./CharactersList.module.css";
 
 const CharactersList = ({ characters, getCharacterInfo, children }) => {
-  console.log(characters);
-
   return (
     <div className={s.container}>
       <ul className={s.list}>

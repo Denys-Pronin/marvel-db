@@ -39,7 +39,6 @@ const CharacterPage = () => {
         const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
         const res = await getCharacter(id);
         setRandomCharacter(res);
-        console.log(res);
       } catch (error) {
         console.log(error);
       } finally {

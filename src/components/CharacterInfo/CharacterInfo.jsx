@@ -5,7 +5,6 @@ import { BarLoader } from "react-spinners";
 
 const CharacterInfo = ({ selectedCharacter, isLoading }) => {
   let imgStyle = { objectFit: "cover" };
-  console.log(selectedCharacter);
 
   if (
     selectedCharacter !== null &&

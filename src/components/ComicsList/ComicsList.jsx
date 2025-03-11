@@ -2,8 +2,6 @@ import Comic from "../Comic/Comic.jsx";
 import s from "./ComicsList.module.css";
 
 const ComicsList = ({ comics, children }) => {
-  console.log(comics);
-
   return (
     <div className={s.container}>
       <ul className={s.list}>

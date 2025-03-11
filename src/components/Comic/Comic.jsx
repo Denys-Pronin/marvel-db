@@ -16,6 +16,11 @@ const Comic = ({ comicData }) => {
         style={imgStyle}
       />
       <p className={s.name}>{comicData.title}</p>
+      <p>
+        {comicData.prices[0].price !== 0
+          ? comicData.prices[0].price + "$"
+          : "NOT AVAILABLE"}
+      </p>
     </div>
   );
 };

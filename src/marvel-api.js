@@ -31,7 +31,5 @@ export const getAllComics = async (offset) => {
       apikey: API_KEY,
     },
   });
-  console.log(res.data);
-
   return res.data.data.results;
 };
